@@ -7,14 +7,20 @@ export default function Header() {
 
     return (
         <>
-            <div className="container">
-                <div className="botoes">
+            <header>
+                <div className="container_annunciment_bar">entregamos para todo brasil</div>
+                <div className="header_nav">
+
                     <nav>
-                        <Link className="btn" to="/"> Lista de produtos</Link>
-                        <Link className="btn" to="cadastrar">Cadastrar produto</Link>
+                        <Link className="btn" to="/">listar produtos</Link>
+                        <Link className="btn" to="cadastrar">cadastrar produto</Link>
+                        <Link className="btn" to="sobre">sobre</Link>
+                        <Link className="btn" to="contato">contato</Link>
                     </nav>
+
                 </div>
-            </div>
+            </header>
+            
         </>
     )
 }

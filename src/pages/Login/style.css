@@ -1,0 +1,33 @@
+
+
+/* .container_login{
+    display: flex;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    height: 80%;
+} */
+
+.container_login /*Container pai*/{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    width: 50%;
+    height: 90vh;
+    
+}
+
+.container_box /*Container filho*/{
+
+}
+.container_login form /*Container filho indireto*/{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .login{
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto;
+} */

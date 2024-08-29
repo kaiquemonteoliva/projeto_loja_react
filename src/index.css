@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #060821;
+    background-color: var(--nightC);
 }
 
 :root {
     --branco: #FFFFFF;
-    --rosa: #C12D6D;
-    --azul: #0C7EAE;
-    --azulP: #060821;
-    --azulC: #182246;
+    --cafe: #3B210F;
+    --black: #040200;
+    --marromC: #473E38;
+    --chumbo: #2F2F31;
+    --azulB: #02040E;
+    --amarelo: #F0AE44;
+    --nightC: #0E0D0F;
+
 
     --font1: 'Righteous', cursive;
     --font2: 'Titillium Web', sans-serif;
+    --fontCafe: "Baskervville SC", serif;
 }
 
 main{

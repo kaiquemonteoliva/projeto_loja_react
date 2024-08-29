@@ -53,11 +53,11 @@ h2{
 button{
   margin: 10px;
   padding: 10px 20px;
-  width: 200px;
-  background-color: #007bff;
-  color: #fff;
+  width: 150px;
+  background-color: var(--cinza);
+  color: var(--chumbo);
   border-radius: 10px;
-  border-color: #007bff;
+  border-color: #DDE5B6;
   cursor: pointer;
 }
 

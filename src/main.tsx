@@ -5,6 +5,7 @@ import ListarProducts from './pages/ListarProducts/index.tsx'
 import CadastrarProducts from './pages/CadastrarProducts/index.tsx'
 import './index.css'
 import Header from './componets/Header/Index.tsx'
+import Login from './pages/Login/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route path="/" element={<ListarProducts />} />
       <Route path="/cadastrar" element={<CadastrarProducts />} />
+      <Route path="/login" element={<Login/>}/>
     </Routes>
     </BrowserRouter>
   </StrictMode>,
