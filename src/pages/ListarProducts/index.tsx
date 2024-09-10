@@ -4,30 +4,25 @@ import api from '../../services/api'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './style.css'
-
+import ImgCafeTable from '../../assets/kit_cafe.png'
 function ListarProducts() {
 
 
 
-  const [produtos, setProdutos] = useState<any[]>([]); // Usamos `any[]` temporariamente se não temos um tipo específico.
-
+  const [produtos, setProdutos] = useState<any[]>([]);
 
   useEffect(
     () => {
       document.title = "Lista de produtos";
 
       listarProdutos();
-      editarProduct();
-      removerProduct();
 
     }, []
   )
 
   function listarProdutos() {
-    // Implementar chamada para a API de listagem de produtos
     api.get("products").then((response: any) => {
       console.log(response.data);
-      // Implementar aqui a lógica para renderizar os produtos na tela
       setProdutos(response.data);
     });
   }
@@ -70,26 +65,31 @@ function ListarProducts() {
     <>
       <main>
         <div className='container_header'>
-          <div className='header'>
-            <h2>Produtos</h2>
-            <button>Listar produtos</button>
-          </div>
+          <h2>Produtos</h2>
         </div>
-
-        <div className='main'>
-          {produtos.length === 0 ? (
-            <p>Carregando produtos...</p>
-          ) : (
+        {produtos.length === 0 ? (<div className='template_produto'>
+          <p>Carregando produtos...</p>
+          </div>) : (
+          <div className='tabela_ul'>
             <ul>
               {produtos.map((produto) => (
                 <li key={produto.id}>
-                  <p>Nome: {produto.name}</p>
-                  <p>Valor: {produto.value}</p>
+                  <div className='template_produto'>
+                    <img src={ImgCafeTable} alt="" />
+                    <div className='template_paragrafo'>
+                      <p>KIT CLÁSSICO ARARA CHAPADA E SUL DE MINAS | GRÃOS - 4 PACOTES</p>
+                      <p>nome: {produto.name}</p>
+                      <p>valor: {produto.value}</p>
+                      <p>description: {produto.description}</p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
-          )}
-        </div>
+          </div>
+        )}
+
+
       </main>
     </>
   )

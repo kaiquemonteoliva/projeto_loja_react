@@ -1,72 +1,23 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
-
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(29, 27, 27);
-} */
-
-
-/* App.css */
-.main ul li p {
-  margin-bottom: 10px;
-  border-radius: 20%;
-  
-}
-
-.main ul li p {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-
-
-
 .container_header{
-display: flex;
-justify-content: center;
-padding-top: 20px;
-}
-
-
-.header {
   display: flex;
   justify-content: center;
+  padding-bottom: 10%;
+  color: var(--branco);
+  font-family: var(--fontCafe);
+  }
+
+  .tabela_ul{
+    width: 90%;
+  }
+
+ .template_produto{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .template_paragrafo{
+  color: var(--branco);
+  display: flex;
   flex-direction: column;
-  width: 80px;
-  align-items: center;
-  padding: 0px;
-}
-
-h2{
-  padding: 15px;
-  color: #fff;
-}
-
-button{
-  margin: 10px;
-  padding: 10px 20px;
-  width: 150px;
-  background-color: var(--cinza);
-  color: var(--chumbo);
-  border-radius: 10px;
-  border-color: #DDE5B6;
-  cursor: pointer;
-}
-
-.main {
-  display: flex;
   justify-content: center;
-  padding-top: 80px;
-  color: rgb(218, 219, 219);
-}
-
-
-
+ }
