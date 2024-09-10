@@ -67,7 +67,7 @@ function ListarProducts() {
         <div className='container_header'>
           <h2>Produtos</h2>
         </div>
-        {produtos.length === 0 ? (<div className='template_produto'>
+        {produtos.length === 0 ? (<div className='template_paragrafo'>
           <p>Carregando produtos...</p>
           </div>) : (
           <div className='tabela_ul'>

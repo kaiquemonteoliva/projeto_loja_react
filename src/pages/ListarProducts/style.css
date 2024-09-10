@@ -13,6 +13,7 @@
  .template_produto{
   display: flex;
   justify-content: space-between;
+  
  }
 
  .template_paragrafo{
