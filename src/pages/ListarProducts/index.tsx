@@ -22,7 +22,7 @@ function ListarProducts() {
 
   function listarProdutos() {
     api.get("products").then((response: any) => {
-      console.log(response.data);
+      console.log(response);
       setProdutos(response.data);
     });
   }
@@ -60,28 +60,37 @@ function ListarProducts() {
 
   }
 
+  document.querySelectorAll('.description').forEach(function(desc) {
+   desc.innerHTML = desc.innerHTML.replace(/,/, '<br>');
+  });
+  
+
 
   return (
     <>
       <main>
         <div className='container_header'>
-          <h2>Produtos</h2>
+          <h2>linha de café gourmet</h2>
         </div>
-        {produtos.length === 0 ? (<div className='template_paragrafo'>
+        {produtos.length === 0 ? (<div className='not_upload'>
           <p>Carregando produtos...</p>
-          </div>) : (
+        </div>) : (
           <div className='tabela_ul'>
             <ul>
               {produtos.map((produto) => (
                 <li key={produto.id}>
                   <div className='template_produto'>
-                    <img src={ImgCafeTable} alt="" />
+                    <img src={"http://localhost:8080/static/img/" + produto.url_img} alt="" />
                     <div className='template_paragrafo'>
-                      <p>KIT CLÁSSICO ARARA CHAPADA E SUL DE MINAS | GRÃOS - 4 PACOTES</p>
-                      <p>nome: {produto.name}</p>
-                      <p>valor: {produto.value}</p>
-                      <p>description: {produto.description}</p>
+                      <p className='titulo'>{produto.name}</p>
+                      <p className='description'>{produto.description}</p>
+                      <p className='value'>{produto.value}</p>
+                      <div className='sales'>
+                      <button>comprar</button>
+                      <input type="number" placeholder='0' />
+                      </div>
                     </div>
+
                   </div>
                 </li>
               ))}

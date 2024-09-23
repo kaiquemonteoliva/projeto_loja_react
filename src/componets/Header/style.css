@@ -24,6 +24,15 @@
     
 }
 
+.logo{
+    width: 125px;
+    height: 115px;
+    background-color: var(--black);
+    padding: 5px;
+    
+    
+}
+
 .header_nav{
     display: flex;
     width: 100%;
@@ -54,6 +63,25 @@
     text-transform: capitalize;
 }
 
+.icon {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--black);
+}
+
+.icon svg {
+    width: 20px;
+    fill: var(--branco);
+    display: flex;
+    justify-content: end;
+}
+
+.icon path{
+    display: flex;
+    justify-content: end;
+    
+}
 
 
-
+  

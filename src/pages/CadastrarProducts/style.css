@@ -1,14 +1,11 @@
 main h1 {
     color: rgb(255, 251, 251);
-}
-
-main{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10%;
 }
+
 
 .form form{
     display: flex;

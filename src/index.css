@@ -6,6 +6,7 @@
     margin: 0;
     box-sizing: border-box;
     background-color: var(--nightC);
+    font-family: var(--fontCafe);
 }
 
 :root {
@@ -22,8 +23,4 @@
     --font1: 'Righteous', cursive;
     --font2: 'Titillium Web', sans-serif;
     --fontCafe: "Baskervville SC", serif;
-}
-
-main{
-    font-family: var(--font1);
 }

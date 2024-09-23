@@ -1,18 +1,37 @@
 .container_header{
   display: flex;
   justify-content: center;
-  padding-bottom: 10%;
+  padding: 5% 0% 5% 0%;
+
   color: var(--branco);
   font-family: var(--fontCafe);
   }
 
-  .tabela_ul{
-    width: 90%;
+  .container_header h2{
+    text-transform: capitalize;
   }
 
- .template_produto{
+.tabela_ul li{
+    display: flex;
+     list-style-type: none;
+     justify-content: space-between;
+     gap: 20px;
+     flex-direction: column;
+     align-items: center;
+     
+  }
+
+  .template_produto{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 90%;
+  
+ }
+
+img{
+   width: 500px;
+  height: 400px;
+  object-fit: cover;
   
  }
 
@@ -21,4 +40,77 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 10% 0 5%;
+
+
+    
  }
+
+ .template_paragrafo p:nth-child(1){
+  padding-bottom: 5%;
+  font-size: 25px;
+ }
+
+ .template_paragrafo p:nth-child(2){
+   font-size: 20px;
+ }
+
+ .template_paragrafo p:nth-child(3){
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.sales{
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  gap: 10px;
+}
+
+.sales button{
+  width: 15%;
+  height: 30%;
+  border-radius: 25px;
+  font-family: var(--fontCafe);
+  font-size: 25px;
+  color: var(--branco);
+  background-color: var(--amarelo);
+  
+}
+
+.sales button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ .sales button:hover{
+  background-color: var(--branco);
+  color: var(--black);
+ }
+
+.sales input{
+  background-color: var(--chumbo);
+  color: var(--branco);
+  width: 50px;
+  height: 30%;
+  font-size: 15px;
+  text-align: center;
+  
+}
+
+.not_upload{
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+
+
+
+
+
+
