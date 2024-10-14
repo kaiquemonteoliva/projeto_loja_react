@@ -1,9 +1,9 @@
 main h1 {
-    color: rgb(255, 251, 251);
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 5% 0% 0% 0%;
+    color: var(--branco);
+    font-family: var(--fontCafe);
 }
 
 
@@ -22,4 +22,13 @@ main h1 {
     color: rgb(255, 255, 255);
 
       
+}
+
+button{
+    background-color: var(--amarelo);
+    color: var(--balck);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }

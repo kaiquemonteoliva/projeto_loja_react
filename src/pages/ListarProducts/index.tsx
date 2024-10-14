@@ -30,7 +30,7 @@ function ListarProducts() {
 
   function editarProduct() {
 
-    const id = ""; // Adicione o ID do produto que deseja editar
+    const id = "";
     const updatedProduct = {
       name: "Alexa",
       value: 400,
@@ -38,9 +38,8 @@ function ListarProducts() {
 
     api.put(`products/${id}`, updatedProduct).then((response: any) => {
       console.log(response.data);
-      // Implementar aqui a lógica para atualizar o produto na lista
       const updatedProdutos = produtos.map((produto) =>
-        produto.id === id ? { ...produto, ...updatedProduct } : produto
+      produto.id === id ? { ...produto, ...updatedProduct } : produto
       );
       setProdutos(updatedProdutos);
     })
@@ -49,16 +48,23 @@ function ListarProducts() {
       });
   }
 
-  function removerProduct() {
-    const removeId = "005ba499-8f92-42b9-94a6-f453fd8d5b0f";
-    api.delete(`products${removeId}`).then((response) => {
+  function removerProductId(id: any) {
+    
+    api.delete(`products/${id}`).then((response) => {
       console.log(response.data);
-      // Implementar aqui a lógica para remover o produto da lista
-      const removeProdutos = produtos.filter((produto) => produto.id !== removeId);
+      const removeProdutos = produtos.filter(produto => produto.idProduto !== id);
+      console.log("ID do produto:", produtos);
       setProdutos(removeProdutos);
+    }) 
+    .catch((error: any) => {
+      console.log("ID do produto a ser deletado:", id);
+      
+
     });
 
   }
+
+  
 
   document.querySelectorAll('.description').forEach(function(desc) {
    desc.innerHTML = desc.innerHTML.replace(/,/, '<br>');
@@ -88,6 +94,7 @@ function ListarProducts() {
                       <div className='sales'>
                       <button>comprar</button>
                       <input type="number" placeholder='0' />
+                      <button onClick={() => removerProductId(produto.idProduto)}>Delete</button>
                       </div>
                     </div>
 

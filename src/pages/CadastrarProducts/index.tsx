@@ -9,7 +9,12 @@ function CadastrarProducts() {
     const [name, setName] = useState<string>("");
     const [value, setValue] = useState<string>("");
     const [description, setDescription] = useState<string>("");
+    const [url_img, setUrl_img] = useState<any>("");
 
+    function verificarCampoUpload(event: any) {
+        setUrl_img(event.target.files[0])
+
+    }
 
     function CadastrarProducts(event: any) {
         event.preventDefault();
@@ -19,6 +24,7 @@ function CadastrarProducts() {
         formData.append("name", name)
         formData.append("value", value)
         formData.append("description", description);
+        formData.append("url_img", url_img);
 
 
         api.post("products", formData, {
@@ -65,6 +71,11 @@ function CadastrarProducts() {
                             placeholder="Descrição do produto"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
+                        />
+                        <input type="file" 
+                        placeholder="Imagen do produto"
+                        onChange={verificarCampoUpload}
+                        required
                         />
                         <button type="submit">Cadastrar</button>
                     </form>
