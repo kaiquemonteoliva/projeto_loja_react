@@ -86,7 +86,7 @@ function ListarProducts() {
               {produtos.map((produto) => (
                 <li key={produto.id}>
                   <div className='template_produto'>
-                    <img src={"http://localhost:8080/static/img/" + produto.url_img} alt="" />
+                    <img src={produto.url_img} alt="" />
                     <div className='template_paragrafo'>
                       <p className='titulo'>{produto.name}</p>
                       <p className='description'>{produto.description}</p>
